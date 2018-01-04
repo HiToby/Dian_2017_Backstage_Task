@@ -1,0 +1,30 @@
+<!DOCTYPE html>    <!--IE,Firefox,Chrome,Safari,Opera都支持该声明，指示web浏览器关于页面使用哪个HTML版本进行编写指令-->
+<html lang="zh-cmn-Hans">  <!--告知浏览器其自身是一个HTML文档-->
+
+<head>
+    <meta charset="UTF-8">   <!--提供有关页面的元信息-->
+    <title>通讯录</title>
+    <link href="stylesheets/index.css" rel="stylesheet" type="text/css"/>
+    <!--<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">-->  <!--定义了文档与外部资源的关系-->
+</head>
+
+<body>
+    <div class="add">添加</div>    <!--div用于定义文档中的分区或节，使用id或class来标记，那么该标签会更加有效-->
+    <ul class="container">     <!--定义无序列表-->
+        <li class="inf-list">    <!--定义列表项目-->
+            <span title="name">姓名</span>    <!--用来组合文档中的行内元素-->
+            <span title="email">邮箱</span>
+            <span title="phone">手机号码</span>
+        </li>
+    </ul>
+    <form name="addInf" class="add-inf-form">   <!--用于为用户输入创建HTML表单-->
+        <div class="close"></div>      <!--关闭标记-->
+        <input type="text" name="name" placeholder="姓名">  <!--用于搜集用户信息-->
+        <input type="text" name="email" placeholder="邮箱">
+        <input type="text" name="phone" placeholder="手机">
+        <input type="submit" value="添加" id="submitInfo">
+    </form>
+    <script type="text/javascript" src="index.js"></script>   <!--定义客户端脚本-->
+</body>
+
+</html>
