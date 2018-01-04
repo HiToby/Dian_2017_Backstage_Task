@@ -181,7 +181,7 @@ function createInfList(data, parent) {
 }
 //得到所有联系人信息的函数
 function getAllInf() {
-    getData("GET", "http://localhost:3000/contacts", null, function() {
+    getData("GET", "http://120.79.74.51:3000/contacts", null, function() {
         if (xmlhttp.readyState == 4) {   //如果服务器响应并成功返回数据
             if (xmlhttp.status == 200) {
                 //将数据转化成javascript对象
@@ -205,7 +205,7 @@ function getAllInf() {
 //删除联系人信息
 function deleteInf(event) {
     var obj = event.target;
-    getData("DELETE", "http://localhost:3000/contacts/" + obj.parentNode.parentNode.getAttribute('id'), null, function() {
+    getData("DELETE", "http://120.79.74.51:3000/contacts/" + obj.parentNode.parentNode.getAttribute('id'), null, function() {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
                 obj.parentNode.parentNode.parentNode.removeChild(obj.parentNode.parentNode);
@@ -252,7 +252,7 @@ function updateInf(event) {
         info.email = email.value;
         info.phone = phone.value;
         console.log(info);
-        getData("PUT", "http://localhost:3000/contacts/" + parent.getAttribute('id'), JSON.stringify(info), function() {
+        getData("PUT", "http://120.79.74.51:3000/contacts/" + parent.getAttribute('id'), JSON.stringify(info), function() {
             if (xmlhttp.readyState == 4) {
                 if (xmlhttp.status == 200) {
                     var data = JSON.parse(xmlhttp.responseText).result;
@@ -342,7 +342,7 @@ addEvent(document.forms.addInf, "submit", function(event) {
         info.email = form.email.value;
         info.phone = form.phone.value;
         console.log(info);
-        getData("POST", "http://localhost:3000/contacts", JSON.stringify(info), function() {
+        getData("POST", "http://120.79.74.51:3000/contacts", JSON.stringify(info), function() {
             if (xmlhttp.readyState == 4) {
                 if (xmlhttp.status == 200) {
                     window.location.href = "index.html";

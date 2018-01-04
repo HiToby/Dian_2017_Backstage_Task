@@ -8,7 +8,7 @@ let should = chai.should();
 chai.use(require('chai-http'));
 chai.use(require('chai-json-schema'));
 
-let baseUrl = (process.env.NODE_ENV === 'production') ? 'http://13.230.86.164:20170' : 'http://localhost:3000';
+let baseUrl = (process.env.NODE_ENV === 'production') ? 'http://120.79.74.51:3000' : 'http://localhost:3000';
 // let baseUrl = 'http://localhost:3000'
 let addContactsJsonSchema = {
     title: 'Add Contacts Response JSON Schema',
